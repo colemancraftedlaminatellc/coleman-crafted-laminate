@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coleman Crafted Laminate LLC | Flooring Installation | South Lyon, MI</title>
+<meta name="description" content="Professional flooring installation serving South Lyon, Northville, Brighton, Milford & surrounding areas. LVP, laminate, hardwood. Licensed & insured. Free estimates.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap');
+
+  :root {
+    --red:    #8B0000;
+    --red2:   #B22222;
+    --gold:   #C9A84C;
+    --gold2:  #F1C40F;
+    --dark:   #111111;
+    --gray:   #1E1E1E;
+    --light:  #F5F5F5;
+    --white:  #FFFFFF;
+    --text:   #2C2C2C;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--text);
+    background: var(--white);
+  }
+
+  /* NAV */
+  nav {
+    background: var(--dark);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--gold);
+  }
+  .nav-logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+    padding: 16px 0;
+    line-height: 1.2;
+  }
+  .nav-logo span { color: var(--gold); }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+  }
+  nav ul li a {
+    color: #CCC;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: color 0.2s, background 0.2s;
+    text-transform: uppercase;
+  }
+  nav ul li a:hover { color: var(--gold); }
+  .nav-cta a {
+    background: var(--red) !important;
+    color: var(--white) !important;
+    border-radius: 3px;
+  }
+  .nav-cta a:hover { background: var(--red2) !important; }
+
+  /* HERO */
+  .hero {
+    background: var(--dark);
+    color: var(--white);
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(135deg, rgba(139,0,0,0.85) 0%, rgba(17,17,17,0.95) 55%),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 60px,
+        rgba(201,168,76,0.04) 60px,
+        rgba(201,168,76,0.04) 61px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 60px,
+        rgba(201,168,76,0.04) 60px,
+        rgba(201,168,76,0.04) 61px
+      );
+  }
+  /* Wood plank texture strips */
+  .hero-planks {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 42%;
+    display: flex;
+    opacity: 0.18;
+  }
+  .plank {
+    flex: 1;
+    background: repeating-linear-gradient(
+      180deg,
+      #5C3A1E 0px, #4A2E14 40px, #6B4423 80px, #3D2410 120px
+    );
+    border-right: 1px solid rgba(0,0,0,0.4);
+  }
+  .plank:nth-child(even) {
+    background: repeating-linear-gradient(
+      180deg,
+      #6B4423 0px, #5C3A1E 50px, #3D2410 100px, #4A2E14 150px
+    );
+    margin-top: 30px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    padding: 60px 48px;
+  }
+  .hero-eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: #CCC;
+    line-height: 1.6;
+    margin-bottom: 36px;
+    max-width: 520px;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--red);
+    color: var(--white);
+    padding: 14px 32px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn-primary:hover { background: var(--red2); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--gold);
+    padding: 14px 32px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid var(--gold);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { background: var(--gold); color: var(--dark); }
+
+  .hero-badge {
+    position: absolute;
+    bottom: 40px;
+    right: 48px;
+    z-index: 2;
+    display: flex;
+    gap: 24px;
+  }
+  .badge-item {
+    text-align: center;
+    border-left: 2px solid var(--gold);
+    padding-left: 16px;
+  }
+  .badge-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .badge-label {
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* SERVICE AREA STRIP */
+  .area-strip {
+    background: var(--red);
+    color: var(--white);
+    text-align: center;
+    padding: 12px 24px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .area-strip span { color: var(--gold2); margin: 0 8px; }
+
+  /* SECTIONS */
+  section { padding: 72px 24px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .section-title em { font-style: normal; color: var(--red); }
+  .gold-rule {
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 32px;
+  }
+
+  /* SERVICES */
+  .services-bg { background: var(--light); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2px;
+    margin-top: 48px;
+    background: #DDD;
+  }
+  .service-card {
+    background: var(--white);
+    padding: 36px 28px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--red);
+    transform: scaleY(0);
+    transition: transform 0.25s;
+    transform-origin: bottom;
+  }
+  .service-card:hover::before { transform: scaleY(1); }
+  .service-card:hover { transform: translateY(-2px); }
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .service-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark);
+    letter-spacing: 0.5px;
+  }
+  .service-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* HOW IT WORKS */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+    counter-reset: steps;
+  }
+  .step { position: relative; padding-left: 0; }
+  .step-num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(139,0,0,0.12);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .step h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark);
+  }
+  .step p { font-size: 0.95rem; color: #666; line-height: 1.6; }
+
+  /* WHY US */
+  .whyus-bg { background: var(--dark); color: var(--white); }
+  .whyus-bg .section-title { color: var(--white); }
+  .whyus-bg .section-label { color: var(--gold); }
+  .whyus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .why-item {
+    border-top: 2px solid var(--gold);
+    padding-top: 20px;
+  }
+  .why-item h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .why-item p { font-size: 0.95rem; color: #AAA; line-height: 1.6; }
+
+  /* PRICING */
+  .pricing-note {
+    background: #FFF8E1;
+    border-left: 4px solid var(--gold);
+    padding: 20px 24px;
+    margin-top: 36px;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 32px;
+    font-size: 0.95rem;
+  }
+  .pricing-table th {
+    background: var(--dark);
+    color: var(--gold);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    text-align: left;
+  }
+  .pricing-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #EEE;
+    color: var(--text);
+  }
+  .pricing-table tr:nth-child(even) td { background: var(--light); }
+  .pricing-table tr:last-child td { border-bottom: none; }
+
+  /* CONTACT */
+  .contact-bg { background: var(--red); color: var(--white); }
+  .contact-bg .section-title { color: var(--white); }
+  .contact-bg .section-label { color: var(--gold2); }
+  .contact-bg .gold-rule { background: var(--gold2); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 40px;
+    align-items: start;
+  }
+  .contact-info p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    color: var(--white);
+  }
+  .contact-detail strong { color: var(--gold2); font-family: 'Oswald', sans-serif; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; display: block; }
+  .contact-form { display: flex; flex-direction: column; gap: 14px; }
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    padding: 13px 16px;
+    border: none;
+    background: rgba(255,255,255,0.12);
+    color: var(--white);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95rem;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder { color: rgba(255,255,255,0.5); }
+  .contact-form input:focus,
+  .contact-form textarea:focus,
+  .contact-form select:focus { border-bottom-color: var(--gold2); }
+  .contact-form select option { color: var(--dark); background: var(--white); }
+  .contact-form textarea { resize: vertical; min-height: 110px; }
+  .btn-gold {
+    background: var(--gold2);
+    color: var(--dark);
+    padding: 14px 32px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-start;
+  }
+  .btn-gold:hover { background: var(--gold); }
+
+  /* FOOTER */
+  footer {
+    background: #0A0A0A;
+    color: #666;
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 0.85rem;
+    border-top: 3px solid var(--red);
+  }
+  footer strong { color: var(--gold); font-family: 'Oswald', sans-serif; letter-spacing: 1px; }
+  footer a { color: #888; text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+
+  /* MOBILE */
+  @media (max-width: 700px) {
+    nav ul { display: none; }
+    .hero-content { padding: 48px 24px; }
+    .hero-badge { position: static; padding: 0 24px 40px; justify-content: flex-start; }
+    .hero { flex-direction: column; min-height: auto; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .hero-planks { display: none; }
+    section { padding: 48px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">COLEMAN <span>CRAFTED</span><br>LAMINATE LLC</div>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#how">Process</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#about">About</a></li>
+    <li class="nav-cta"><a href="#contact">Free Estimate</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-planks">
+    <div class="plank"></div>
+    <div class="plank"></div>
+    <div class="plank"></div>
+    <div class="plank"></div>
+    <div class="plank"></div>
+    <div class="plank"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">South Lyon, MI &nbsp;·&nbsp; Licensed &amp; Insured</div>
+    <h1>Floors Installed<br><em>Right. Every Time.</em></h1>
+    <p class="hero-sub">Family-owned flooring installation serving the western suburbs. LVP, laminate, hardwood — measured right, cut clean, and finished like it matters. Because it does.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Get a Free Estimate</a>
+      <a href="#services" class="btn-outline">See Our Work</a>
+    </div>
+  </div>
+  <div class="hero-badge">
+    <div class="badge-item">
+      <div class="badge-num">30+</div>
+      <div class="badge-label">Years Experience</div>
+    </div>
+    <div class="badge-item">
+      <div class="badge-num">50%</div>
+      <div class="badge-label">Down to Start</div>
+    </div>
+    <div class="badge-item">
+      <div class="badge-num">5</div>
+      <div class="badge-label">Cities Served</div>
+    </div>
+  </div>
+</section>
+
+<!-- AREA STRIP -->
+<div class="area-strip">
+  Serving<span>·</span>South Lyon<span>·</span>Northville<span>·</span>Brighton<span>·</span>Milford<span>·</span>Howell<span>·</span>New Hudson
+</div>
+
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="container">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Installation Services</h2>
+    <div class="gold-rule"></div>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">🪵</span>
+        <h3>LVP / Luxury Vinyl Plank</h3>
+        <p>Waterproof, durable, and built for real life. Perfect for kitchens, bathrooms, and basements. Floats or glues down — we do it right either way.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📐</span>
+        <h3>Laminate Flooring</h3>
+        <p>Clean, sharp installs with proper expansion gaps, transitions, and trim work. No shortcuts, no squeaks, no callbacks.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🌲</span>
+        <h3>Hardwood Installation</h3>
+        <p>Nail-down, staple-down, or glue-down. We work with solid and engineered hardwood and get the subfloor right before we ever lay a plank.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔨</span>
+        <h3>Flooring Removal</h3>
+        <p>Old carpet, tile, or existing flooring removed and hauled. Clean slate before the new floor goes in.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🪜</span>
+        <h3>Trim &amp; Transitions</h3>
+        <p>Quarter round, shoe molding, T-moldings, reducers, and threshold transitions — all included, all installed clean.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🎨</span>
+        <h3>Interior Painting &amp; Cabinet Staining</h3>
+        <p>Add-on services to complement your new floors. Fresh walls, stained cabinets — full room refresh in one visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">Simple From Start to <em>Finish</em></h2>
+    <div class="gold-rule"></div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Free Estimate</h3>
+        <p>We come to you, measure the space, and give you a clear written quote. No pressure, no surprises.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>50% Down</h3>
+        <p>Half upfront to lock in your date and secure materials. Balance due when the job is done and you're happy.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>We Show Up</h3>
+        <p>James, Josh, and Christina arrive on time, protect your space, and get to work. No subcontractors — same crew every time.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Done Right</h3>
+        <p>Job finished clean, trim installed, debris cleared. We walk you through the finished floor before we leave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="whyus-bg">
+  <div class="container">
+    <div class="section-label">Why Coleman Crafted</div>
+    <h2 class="section-title">Family Business.<br>Professional Results.</h2>
+    <div class="gold-rule"></div>
+    <div class="whyus-grid">
+      <div class="why-item">
+        <h3>Family-Owned & Operated</h3>
+        <p>James, his son Josh, and wife Christina do every job personally. You know exactly who's in your home.</p>
+      </div>
+      <div class="why-item">
+        <h3>30+ Years of Experience</h3>
+        <p>Decades of construction and flooring work. We've seen every subfloor situation and know how to handle it.</p>
+      </div>
+      <div class="why-item">
+        <h3>Straight Pricing</h3>
+        <p>Per square foot labor pricing with no hidden fees. You get a written estimate upfront — what we quote is what you pay.</p>
+      </div>
+      <div class="why-item">
+        <h3>Western Suburbs Specialists</h3>
+        <p>We live and work here. South Lyon, Northville, Brighton, Milford, Howell — this is our backyard.</p>
+      </div>
+      <div class="why-item">
+        <h3>Licensed LLC & Insured</h3>
+        <p>Coleman Crafted Laminate LLC, Michigan Entity #900228914. Fully insured for your peace of mind.</p>
+      </div>
+      <div class="why-item">
+        <h3>Signed Agreement on Every Job</h3>
+        <p>Written service agreement before work starts. Clear scope, clear terms — protects you and us both.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Transparent Labor Rates</h2>
+    <div class="gold-rule"></div>
+    <p style="color:#555; font-size:1rem; line-height:1.7; max-width:620px;">We charge for labor only — you supply the material or we can help you source it at contractor pricing. All rates are per square foot of installed flooring.</p>
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Rate</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>LVP / Laminate Installation</strong></td>
+          <td>Contact for quote</td>
+          <td>Per sq ft labor rate</td>
+        </tr>
+        <tr>
+          <td><strong>Hardwood Installation</strong></td>
+          <td>Contact for quote</td>
+          <td>Nail-down, staple, or glue</td>
+        </tr>
+        <tr>
+          <td><strong>Flooring Removal</strong></td>
+          <td>Contact for quote</td>
+          <td>Per sq ft, includes haul-away</td>
+        </tr>
+        <tr>
+          <td><strong>Trim / Transitions</strong></td>
+          <td>Contact for quote</td>
+          <td>Quarter round, T-mold, reducers</td>
+        </tr>
+        <tr>
+          <td><strong>Interior Painting</strong></td>
+          <td>Contact for quote</td>
+          <td>Add-on with flooring job</td>
+        </tr>
+        <tr>
+          <td><strong>Cabinet Staining</strong></td>
+          <td>Contact for quote</td>
+          <td>Add-on with flooring job</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pricing-note">
+      <strong>Minimum job threshold applies.</strong> 50% deposit required to schedule. Balance due upon completion. We accept cash, Zelle, and bank transfer. All jobs include a signed service agreement.
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="background:var(--light);">
+  <div class="container">
+    <div class="section-label">About Us</div>
+    <h2 class="section-title">Built on Craft. <em>Run on Trust.</em></h2>
+    <div class="gold-rule"></div>
+    <div style="max-width:720px;">
+      <p style="font-size:1.05rem; line-height:1.8; color:#444; margin-bottom:20px;">Coleman Crafted Laminate LLC is a family flooring installation business based in South Lyon, Michigan. Owner James Coleman brings over 30 years of construction experience to every job — from subfloor prep to finished trim, nothing gets skipped.</p>
+      <p style="font-size:1.05rem; line-height:1.8; color:#444; margin-bottom:20px;">Every job is done by the same crew: James handles the install, Josh assists on larger jobs, and Christina brings an eye for design to help customers make the right material choices. You're not getting a random crew — you're getting us.</p>
+      <p style="font-size:1.05rem; line-height:1.8; color:#444;">We serve the western suburbs corridor — South Lyon, Northville, Brighton, Milford, Howell, and New Hudson. If you're in the area, we'd love to give you a free estimate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-bg" id="contact">
+  <div class="container">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Request a Free Estimate</h2>
+    <div class="gold-rule"></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>Ready to get started? Fill out the form and we'll get back to you within 24 hours to schedule your free in-home estimate.</p>
+        <div class="contact-detail">
+          <div>
+            <strong>Phone / Text</strong>
+            (___) ___-____
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div>
+            <strong>Email</strong>
+            info@colemancraftedlaminatellc.com
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div>
+            <strong>Service Area</strong>
+            South Lyon · Northville · Brighton · Milford · Howell · New Hudson
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div>
+            <strong>Hours</strong>
+            Mon–Sat: 8am – 6pm
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Job Address / City">
+        <select required>
+          <option value="" disabled selected>Type of Flooring</option>
+          <option>LVP / Luxury Vinyl Plank</option>
+          <option>Laminate</option>
+          <option>Hardwood</option>
+          <option>Not sure yet</option>
+        </select>
+        <input type="text" placeholder="Approx. Square Footage (if known)">
+        <textarea placeholder="Tell us about your project — rooms, current flooring, timeline, etc."></textarea>
+        <button type="submit" class="btn-gold">Send Estimate Request</button>
+        <div id="form-msg" style="display:none; color:#F1C40F; font-size:0.9rem; margin-top:4px;"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>COLEMAN CRAFTED LAMINATE LLC</strong></p>
+  <p style="margin-top:8px;">South Lyon, MI &nbsp;·&nbsp; Michigan LLC #900228914 &nbsp;·&nbsp; Licensed &amp; Insured</p>
+  <p style="margin-top:8px; font-size:0.8rem;">Serving South Lyon · Northville · Brighton · Milford · Howell · New Hudson</p>
+  <p style="margin-top:16px; font-size:0.75rem;">&copy; 2026 Coleman Crafted Laminate LLC. All rights reserved.</p>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const msg = document.getElementById('form-msg');
+  msg.style.display = 'block';
+  msg.textContent = "✓ Request sent! We'll be in touch within 24 hours.";
+  e.target.reset();
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</body>
+</html>
