@@ -761,7 +761,13 @@
           <option>Hardwood</option>
           <option>Not sure yet</option>
         </select>
-        <input type="text" placeholder="Approx. Square Footage (if known)">
+        <select>
+  <option value="" disabled selected>Existing flooring to be removed?</option>
+  <option>Yes – needs removal</option>
+  <option>No – going over existing</option>
+  <option>Not sure</option>
+</select>
+       <input type="text" placeholder="Approx. Square Footage (if known)">
         <textarea placeholder="Tell us about your project — rooms, current flooring, timeline, etc."></textarea>
         <button type="submit" class="btn-gold">Send Estimate Request</button>
         <div id="form-msg" style="display:none; color:#F1C40F; font-size:0.9rem; margin-top:4px;"></div>
