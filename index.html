@@ -772,12 +772,16 @@ function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;
   const msg = document.getElementById('form-msg');
-  const data = new FormData(form);
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
 
   fetch(form.action, {
     method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    }
   })
   .then(response => {
     if (response.ok) {
