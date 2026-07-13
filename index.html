@@ -738,10 +738,17 @@
 <input type="email" name="email" placeholder="Email Address">
 <input type="text" name="address" placeholder="Job Address / City">
 <select name="flooring_type" required>
-  ...
+  <option value="" disabled selected>Type of Flooring</option>
+  <option>LVP / Luxury Vinyl Plank</option>
+  <option>Laminate</option>
+  <option>Hardwood</option>
+  <option>Not sure yet</option>
 </select>
 <select name="removal_needed">
-  ...
+  <option value="" disabled selected>Existing flooring to be removed?</option>
+  <option>Yes - needs removal</option>
+  <option>No - going over existing</option>
+  <option>Not sure</option>
 </select>
 <input type="text" name="square_footage" placeholder="Approx. Square Footage (if known)">
 <textarea name="details" placeholder="Tell us about your project – rooms, current flooring, timeline, etc."></textarea>
