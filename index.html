@@ -734,7 +734,7 @@
       </div>
      <form class="contact-form" action="https://formspree.io/f/mpqvzzgw" method="POST" onsubmit="handleSubmit(event)">
 <input type="text" name="name" placeholder="Your Name" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
+<input type="tel" name="phone" id="phone" placeholder="Phone Number" required maxlength="12">
 <input type="email" name="email" placeholder="Email Address">
 <input type="text" name="address" placeholder="Job Address / City">
 <select name="flooring_type" required>
@@ -767,7 +767,17 @@
   <p style="margin-top:16px; font-size:0.75rem;">&copy; 2026 Coleman Crafted Laminate LLC. All rights reserved.</p>
 </footer>
 
-<script>
+  <script>
+  document.getElementById('phone').addEventListener('input', function(e) {
+  let digits = e.target.value.replace(/\D/g, '').slice(0, 10);
+  let formatted = digits;
+  if (digits.length > 6) {
+    formatted = digits.slice(0,3) + '-' + digits.slice(3,6) + '-' + digits.slice(6);
+  } else if (digits.length > 3) {
+    formatted = digits.slice(0,3) + '-' + digits.slice(3);
+  }
+  e.target.value = formatted;
+});
 function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;
