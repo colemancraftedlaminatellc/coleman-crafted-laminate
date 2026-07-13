@@ -733,25 +733,18 @@
         </div>
       </div>
      <form class="contact-form" action="https://formspree.io/f/mpqvzzgw" method="POST" onsubmit="handleSubmit(event)">
-        <input type="text" placeholder="Your Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <input type="email" placeholder="Email Address">
-        <input type="text" placeholder="Job Address / City">
-        <select required>
-          <option value="" disabled selected>Type of Flooring</option>
-          <option>LVP / Luxury Vinyl Plank</option>
-          <option>Laminate</option>
-          <option>Hardwood</option>
-          <option>Not sure yet</option>
-        </select>
-        <select>
-  <option value="" disabled selected>Existing flooring to be removed?</option>
-  <option>Yes – needs removal</option>
-  <option>No – going over existing</option>
-  <option>Not sure</option>
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<input type="email" name="email" placeholder="Email Address">
+<input type="text" name="address" placeholder="Job Address / City">
+<select name="flooring_type" required>
+  ...
 </select>
-       <input type="text" placeholder="Approx. Square Footage (if known)">
-        <textarea placeholder="Tell us about your project — rooms, current flooring, timeline, etc."></textarea>
+<select name="removal_needed">
+  ...
+</select>
+<input type="text" name="square_footage" placeholder="Approx. Square Footage (if known)">
+<textarea name="details" placeholder="Tell us about your project – rooms, current flooring, timeline, etc."></textarea>
         <button type="submit" class="btn-gold">Send Estimate Request</button>
         <div id="form-msg" style="display:none; color:#F1C40F; font-size:0.9rem; margin-top:4px;"></div>
       </form>
